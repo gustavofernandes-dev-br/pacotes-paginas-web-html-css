@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Seja Zen
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.slider').bxSlider(
+            {
+                mode: "horizontal",               
+                speed: 500,
+                randomStart: true,
+                auto: true,
+                pause: 5000,
+                autoHover: true ,
+               
+            }
+        );
+
+        $('#btn-menu').click(() => {
+            $("#menu").slideToggle();
+            $("#btn-menu").toggleClass("x");
+
+            //$("#menu").Toggle();
+            //$("#menu").fadeToggle();
+        } )
+
+      });
+    </script>
+</head>
+<body>
+    <header id="topo">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo-seja-zen.png" alt="">
+                </a>
+            </div>
+
+            <div id="btn-menu">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
+
+            <nav id="menu">
+                <a href="index.html">Início</a>
+                <a href="#">Quem Somos</a>
+                <a href="#">Serviços</a>
+                <a href="#">Clientes</a>
+                <a href="#">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <div id="banner" class="slider">
+        <picture>
+            <source srcset="img/banner-mob-1.jpg" media="(max-width: 767px)">
+            <img src="img/banner-1.jpg" alt="">            
+        </picture>
+        <picture>
+            <source srcset="img/banner-mob-2.jpg" media="(max-width: 767px)">
+            <img src="img/banner-2.jpg" alt="">
+        </picture>
+        <picture>
+            <source srcset="img/banner-mob-3.jpg" media="(max-width: 767px)">
+            <img src="img/banner-3.jpg" alt="">            
+        </picture>
+    </div>
+
+    <div class="container">
+        <div id="depoimento">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Proin dictum ante eu lectus gravida commodo.”</p>
+            <span>Ana Santos</span>
+        </div>
+
+        <article id="conteudo-principal">
+            <img src="img/itens-spa.jpg" alt="" class="img-left">
+            <h1>Cuidando do corpo e mente</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat </p>
+            <a href="#" class="botao">Saiba mais</a>
+            
+            <div class="clearFix"></div> 
+            <div id="colunas">
+                <section class="coluna">
+                    <h2>Nossos Serviços</h2>
+                    <img src="img/imagem-servicos.jpg" alt="">
+                    <a href="#" class="botao">Saiba Mais</a>
+                </section>  
+                <section class="coluna">
+                    <h2>Especial Dia da Noiva</h2>
+                    <img src="img/imagem-dia-da-noiva.jpg" alt="">
+                    <a href="#" class="botao">Saiba Mais</a>
+                </section>  
+                <section class="coluna">
+                    <h2>Ambiente Zen</h2>
+                    <img src="img/imagem-ambiente.jpg" alt="">
+                    <a href="#" class="botao">Saiba Mais</a>
+                </section>  
+            </div> 
+
+        </article>
+
+
+    </div>
+
+    <footer id="rodape">
+        <div class="container">
+            <div id="endereco">
+                <strong>Tel: </strong>(21) 2133-4545 / 98345-2345 <br>
+                Avenida Rio Branco, 185 - Sala 324 - Centro - Rio de Janeiro
+            </div>
+            <div id="midias">
+                <a href="https://wa.me/5521967746824"><i class="fab fa-whatsapp"></i></a> 
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a> 
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a> 
+           
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

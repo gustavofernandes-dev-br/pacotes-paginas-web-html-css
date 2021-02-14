@@ -1,0 +1,228 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    */
+    color: #888;
+}
+.clearfix{
+    clear: both;
+}
+
+h1{
+    color: #5999a9;
+    size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+#servicos figure{
+    margin:0 0 0 30px;
+    font-style: italic;
+    float: right;
+}
+ul{
+    list-style-position: inside;
+    list-style-type : square;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+h2{
+    display: inline;
+    font-size: 14px;
+}
+li{
+    margin-bottom: 25px;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+}
+
+#topo .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%;   
+}
+.container{
+    /* width: 1000px; */
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#quemsomos img{
+    width: 100%;
+}
+
+#topo{
+    width: 100%;
+    background-color: rgba(0, 56, 112,0.75);
+    position: fixed;
+    z-index: 1;
+}
+#menu a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 25px;
+}
+#menu a:hover{
+    background-color: #003870;
+}
+#banner{
+    background-image: url(img/banner.jpg) ;
+    background-size: cover;
+    background-position: right;
+    height: 100vh; /*1vh = altura do browser/100 */ 
+    position: relative;
+    background-attachment: fixed;
+
+}
+#seta{
+    position: absolute;
+    bottom:  0;
+    left: calc(50% - 23px);
+}
+
+#crianca{
+    background-image: url("img/crianca.jpg") ;
+    background-size: cover ;
+    height: 500px;
+    background-attachment: fixed; /*paralax*/ /*paralax.*/
+}
+
+input[type="text"] {
+    width: 280px;
+    height: 25px;
+    border: none;
+    background-color: #eee;
+    margin-top: 5px;
+}
+/*manipular atributo
+a[href="promocao.html"{
+}
+*/
+input[type="submit"] {
+    border: none;
+    color: #ffffff;
+    padding: 5px 25px;
+    background-color: #999;
+    margin-top: 10px;
+}
+
+
+textarea{
+    background-color: #eee;
+    border: none;
+    width: 400px;
+    height: 140px;
+    margin-top: 5px;
+}
+
+footer{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: #003870;
+    margin-top: 50px;
+    padding: 25px;
+}
+
+footer p{
+    font-size: 14px;
+    margin: 0;
+}
+
+/*Media Querie
+@media screen and (min-width:768px) and (max-width:1024px)  {
+*/
+@media screen and (max-width:1024px){
+    #topo .container{
+        flex-direction: column; /*collum-reverse*/
+    }
+    #logo{
+        margin-top: 20px;
+    }
+    h1{
+        padding-top: 50px;
+    }
+    #banner{
+        height: 500px;
+        background-attachment: scroll;  
+       /* background-image: url(https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fnews.sky.com%2Fstory%2Fless-than-half-of-adults-saw-nhs-dentist-in-past-two-years-figures-show-12057904&psig=AOvVaw1bz-483149-TsrijxAyTwM&ust=1604843396390000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCRtePJ8OwCFQAAAAAdAAAAABAD);
+        */
+    }
+    /*desabilitando display flex
+        #servicos .flex(
+        display: block;
+    }
+    */
+
+    #servicos figure{
+        width: 50% ;
+    }
+    #servicos figure img{
+        width: 100%;
+    }
+    #servicos figure figcaption{
+        display: none;
+    }
+
+    #crianca{
+        background-attachment: scroll;
+        height: 250px;
+    }
+
+    #contato .flex{
+        flex-direction: column;
+    }
+
+    #contato form{
+        margin-bottom: 30px;
+    }
+
+    #contato textarea{
+        width: 100%;
+    }
+    #contato iframe{
+        width: 100%;
+    }
+}
+@media screen and (max-width:767px){
+    #topo .container{
+        width: 100%;
+    }
+
+    #menu{
+      display: none;
+      width: 100%;
+    }
+    #menu a{
+        display: block;
+        text-align: center;
+    }
+
+    #logo{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #btn-menu{
+        position: absolute;
+        right: 10px;
+        top:13px;
+    }
+    .barra{
+        height: 4px;
+        width: 30px;
+        background-color: #ffffff;
+        margin-bottom: 4px;
+      
+    }
+}
